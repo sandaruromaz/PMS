@@ -81,7 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
+<<<<<<< HEAD
                     123qwe
+=======
+                    ABC
+>>>>>>> 9480745a702a472087d57bf1009409e53d64c20c
                 </div>
 
                 <div class="links">
