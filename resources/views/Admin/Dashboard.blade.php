@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    This is Admin Dashboard
+ @extends('layouts.adminlayout')
 </body>
 </html>
