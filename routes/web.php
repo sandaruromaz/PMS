@@ -22,3 +22,8 @@ Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin'
 Route::get('/user', 'UserController@index')->name('user')->middleware('user');
 
 Route::get('/home', 'HomeController@index')->name('home');
+//admin related routes
+Route::get('/Admin/customer', function () {
+
+    return view('.Admin.customer');
+});

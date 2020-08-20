@@ -12,9 +12,6 @@
         <div>
             @include('General.header')
         </div>
-    <div>
-    <br><br><br><br>
-    </div>
         <div>
             @yield('content')
         </div>

@@ -76,7 +76,14 @@
                     <a class="dropdown-item" href="#">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                     </div>
                 </li>
                 </ul>
@@ -84,5 +91,26 @@
             </div>
         </nav>
         </div>
+            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-datetimepicker.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/fullcalendar.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/arrive.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-notify.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-selectpicker.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tagsinput.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/chartist.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jasny-bootstrap.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jquery.bootstrap-wizard.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jquery.dataTables.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jquery.tagsinput.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jquery.validate.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jquery-jvectormap.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/moment.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/nouislider.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/perfect-scrollbar.jquery.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/sweetalert2.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/popper.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-material-design.min.js') }}" ></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
     </body>
 </html>
