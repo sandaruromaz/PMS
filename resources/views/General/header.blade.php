@@ -9,13 +9,7 @@
         <title>
           Material Dashboard by Creative Tim
         </title>
-        <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-        <!--     Fonts and icons     -->
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="{{ URL::asset('css/material-dashboard.css?v=2.1.2') }}">
-        
+        <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />      
       </head>
       
 </head>
@@ -91,26 +85,5 @@
             </div>
         </nav>
         </div>
-            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-datetimepicker.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/fullcalendar.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/arrive.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-notify.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-selectpicker.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-tagsinput.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/chartist.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jasny-bootstrap.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jquery.bootstrap-wizard.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jquery.dataTables.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jquery.tagsinput.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jquery.validate.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jquery-jvectormap.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/moment.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/nouislider.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/perfect-scrollbar.jquery.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/sweetalert2.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/popper.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ URL::asset('js/bootstrap-material-design.min.js') }}" ></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
     </body>
 </html>

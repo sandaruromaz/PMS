@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="{{ URL::asset('css/material-dashboard.css?v=2.1.2') }}">
 </head>
 <body>
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
@@ -21,41 +16,74 @@
         <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
             Binara Pawning Center
           </a></div>
+          <div class="invisible">
+            @if ($activetab=="Dashboard")
+                {{$dashboard='active'}}
+            @else
+                {{$dashboard='nav-item'}}
+            @endif
+            @if ($activetab=="usercontrol")
+                {{$usercontrol='active'}};
+            @else
+                {{$usercontrol='nav-item'}};
+            @endif
+            @if ($activetab=="customer")
+                {{$customer='active'}};
+            @else
+                {{$customer='nav-item'}};
+            @endif
+            @if ($activetab=="createjob")
+                {{$createjob='active'}};
+            @else
+                {{$createjob='nav-item'}};
+            @endif
+            @if ($activetab=="articles")
+                {{$articles='active'}};
+            @else
+                {{$articles='nav-item'}};
+            @endif
+            </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
-            <li class="nav-item active  ">
-              <a class="nav-link" href="./dashboard.html">
-                <i class="material-icons">dashboard</i>
+            <li class="{{$dashboard}}  ">
+              <a class="nav-link" href="{{URL('/Admin/Dashboard')}}">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
                 <p>Dashboard</p>
               </a>
             </li>
-            <li class="nav-item ">
+            <li class="{{$customer}}">
               <a class="nav-link" href="{{URL('/Admin/customer')}}">
-                <i class="material-icons">person</i>
+                <i class="fa fa-user" aria-hidden="true"></i>
                 <p>Customers</p>
               </a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./tables.html">
-                <i class="material-icons">work</i>
+            <li class="{{$articles}} ">
+              <a class="nav-link" href="{{URL('/Admin/articles')}}">
+                <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                <p>Articles</p>
+              </a>
+            </li>
+            <li class="{{$createjob}} ">
+              <a class="nav-link" href="{{URL('/Admin/createjob')}}">
+                <i class="fa fa-briefcase" aria-hidden="true"></i>
                 <p>Create Jobs</p>
               </a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="./typography.html">
-                <i class="material-icons">multiline_chart</i>
+                <i class="fa fa-pie-chart" aria-hidden="true"></i>
                 <p>Reports</p>
               </a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./icons.html">
-                <i class="material-icons">person_add_alt_1</i>
-                <p>Create Users</p>
+            <li class="{{$usercontrol}} ">
+              <a class="nav-link" href="{{URL('/Admin/usercontrol')}}">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                <p>Control Users</p>
               </a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="./notifications.html">
-                <i class="material-icons">notifications</i>
+                <i class="fa fa-bell" aria-hidden="true"></i>
                 <p>Notifications</p>
               </a>
             </li>

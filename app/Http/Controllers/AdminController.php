@@ -8,6 +8,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('Admin.Dashboard');
+        $activetab="Dashboard";
+        return view('Admin.Dashboard')
+        ->with('activetab',$activetab);
     }
 }

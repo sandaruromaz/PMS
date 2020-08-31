@@ -22,8 +22,36 @@ Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin'
 Route::get('/user', 'UserController@index')->name('user')->middleware('user');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 //admin related routes
 Route::get('/Admin/customer', function () {
-
-    return view('.Admin.customer');
+    $activetab="customer";
+    return view('.Admin.customer')
+    ->with('activetab',$activetab);
 });
+Route::get('/Admin/usercontrol', function () {
+    $activetab="usercontrol";
+    return view('.Admin.usercontrol')
+    ->with('activetab',$activetab);
+});
+Route::get('/Admin/Dashboard', function () {
+    $activetab="Dashboard";
+    return view('.Admin.Dashboard')
+    ->with('activetab',$activetab);
+});
+Route::get('/Admin/createjob', function () {
+    $activetab="createjob";
+    return view('.Admin.createjob')
+    ->with('activetab',$activetab);
+});
+Route::get('/Admin/articles', function () {
+    $activetab="articles";
+    return view('.Admin.articles')
+    ->with('activetab',$activetab);
+});
+
+//admin related save
+Route::post('/savecustomer', 'CustomerController@store');
+//auto compleated
+Route::get('/NICAutocompleate',array('as'=>'NICAutocompleate','uses'=>'CustomerController@NICAutocompleate'));

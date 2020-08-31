@@ -25,31 +25,37 @@
                 <ul class="nav">
                     <li class="nav-item active  ">
                     <a class="nav-link" href="./dashboard.html">
-                        <i class="material-icons">dashboard</i>
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
                         <p>Dashboard</p>
                     </a>
                     </li>
                     <li class="nav-item ">
                     <a class="nav-link" href="./user.html">
-                        <i class="material-icons">person</i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
                         <p>Customers</p>
                     </a>
                     </li>
                     <li class="nav-item ">
+                        <a class="nav-link" href="./user.html">
+                            <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                            <p>Articles</p>
+                        </a>
+                        </li>
+                    <li class="nav-item ">
                     <a class="nav-link" href="./tables.html">
-                        <i class="material-icons">work</i>
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
                         <p>Create Jobs</p>
                     </a>
                     </li>
                     <li class="nav-item ">
                     <a class="nav-link" href="./typography.html">
-                        <i class="material-icons">multiline_chart</i>
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
                         <p>Reports</p>
                     </a>
                     </li>
                     <li class="nav-item ">
                     <a class="nav-link" href="./notifications.html">
-                        <i class="material-icons">notifications</i>
+                        <i class="fa fa-bell" aria-hidden="true"></i>
                         <p>Notifications</p>
                     </a>
                     </li>

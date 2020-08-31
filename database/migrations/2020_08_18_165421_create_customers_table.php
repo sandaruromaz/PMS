@@ -23,6 +23,7 @@ class CreateCustomersTable extends Migration
             $table->string('email',255);
             $table->string('behavior',50);
             $table->string('cusID',50);
+            $table->string('spnote',255);
             $table->timestamps();
         });
     }
