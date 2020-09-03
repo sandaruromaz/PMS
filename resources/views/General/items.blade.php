@@ -20,6 +20,32 @@
             </div>
             <div class="col-md-12">
             <div class="card">
+<!--==========customer details==========-->
+                <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-header card-header-primary">
+                <h4 class="card-title">Customer Details</h4>
+                </div>
+                <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                    <label class="bmd-label-floating">NIC No</label>
+                    <input type="text" class="form-control" name="nic" id="nic">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                    <label class="bmd-label-floating">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" disabled>
+                    </div>
+                </div>
+                <input name="cusID" type="hidden" id="cusID">
+                </div>
+            </div>
+            </div>
+                </div>
+ <!--===============end customer details==============-->
                 <div class="col-md-12">
                 <div class="card">
                 <div class="card-header card-header-primary">
@@ -31,27 +57,21 @@
                     <div class="col-md-4">
                         <div class="form-group">
                         <label class="bmd-label-floating">Type of Article</label>
-                        <select class="custom-select" name="itemname"  >
+                        <select class="custom-select" name="itemname"  id="itemname">
                             <option disabled hidden selected>Select Article Type</option>
-                            <option value="Ring">Ring</option>
-                            <option value="Bangle">Bangle</option>
-                            <option value="Bracelet">Bracelet</option>
-                            <option value="Earring">Earring</option>
-                            <option value="Pendant">Pendant</option>
-                            <option value="Necklace">Necklace</option>
                           </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                         <label class="bmd-label-floating">Gold Qulity</label>
-                        <input type="text" class="form-control" name="qulity">
+                        <input type="text" class="form-control" name="qulity" id="qulity">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                         <label class="bmd-label-floating">Weigth</label>
-                        <input type="text" class="form-control" name="weigth">
+                        <input type="text" class="form-control" name="weigth" id="weigth">
                         </div>
                     </div>
                     </div>
@@ -59,7 +79,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                         <label class="bmd-label-floating">Damage Description</label>
-                        <input type="text" class="form-control" name="damage">
+                        <input type="text" class="form-control" name="damage" id="damage">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -75,13 +95,13 @@
                     <div class="col-md-4">
                         <div class="form-group">
                         <label class="bmd-label-floating">Maximum Amount</label>
-                        <input type="text" class="form-control"maxamount name="">
+                        <input type="text" class="form-control"maxamount name="maxamount" id="maxamount">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                         <label class="bmd-label-floating">Loan Amount</label>
-                        <input type="text" class="form-control" name="loanamount">
+                        <input type="text" class="form-control" name="loanamount" id="loanamount">
                         </div>
                     </div>
                     </div>
@@ -115,32 +135,7 @@
                         </div>
                     </div>
             <!--End job section-->
-            <div class="row">
-                <div class="col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-header card-header-primary">
-                <h4 class="card-title">Customer Details</h4>
-                </div>
-                <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                    <label class="bmd-label-floating">NIC No</label>
-                    <input type="text" class="form-control" name="nic" id="nic">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                    <label class="bmd-label-floating">Name</label>
-                    <input type="text" class="form-control" name="name" id="name" disabled>
-                    </div>
-                </div>
-                <input name="cusID" type="hidden" id="cusID">
-                </div>
-            </div>
-            </div>
-                </div>
-            </div>
+
                     <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
                     <div class="clearfix"></div>
 
@@ -174,6 +169,21 @@
                .appendTo( ul );
             };
          });
+         
+</script>
+<script>
+     $("#nic").on('change',function(e){
+            $.get('/itemselect?cusID=' +($("#cusID").val()),function(data){
+                $('#itemname').empty();
+                $('#itemname').append('<option disabled hidden selected>Select Article Type</option>');
+
+                $.each(data,function(index,selectitemobj){
+                    console.log(selectitemobj.itemname);
+                 $('#itemname').append('<option value="'+selectitemobj.itemname+'">'+selectitemobj.itemname+'</option>');
+                 
+                });
+            });
+            });
 </script>
 </body>
 </html>

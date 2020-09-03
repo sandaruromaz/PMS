@@ -111,132 +111,65 @@
                           <div class="col-md-12">
                             <div class="card">
                               <div class="card-header card-header-primary">
-                                <h4 class="card-title ">Simple Table</h4>
-                                <p class="card-category"> Here is a subtitle for this table</p>
+                                <h4 class="card-title ">Customers</h4>
                               </div>
                               <div class="card-body">
                                 <div class="table-responsive">
                                   <table class="table">
                                     <thead class=" text-primary">
                                       <th>
-                                        ID
+                                        NIC
                                       </th>
                                       <th>
                                         Name
                                       </th>
                                       <th>
-                                        Country
+                                        Mobile No
                                       </th>
                                       <th>
-                                        City
+                                        Home No
                                       </th>
                                       <th>
-                                        Salary
+                                        Email
+                                      </th>
+                                      <th>
+                                        Address
+                                      </th>
+                                      <th>
+                                        Behavior
                                       </th>
                                     </thead>
                                     <tbody>
+                                      @foreach ($customerdata as $customerdata)
                                       <tr>
                                         <td>
-                                          1
+                                          {{$customerdata->nic}}
                                         </td>
                                         <td>
-                                          Dakota Rice
+                                          {{$customerdata->name}}
                                         </td>
                                         <td>
-                                          Niger
+                                          {{$customerdata->telephone1}}
                                         </td>
                                         <td>
-                                          Oud-Turnhout
+                                          {{$customerdata->telephone2}}
                                         </td>
-                                        <td class="text-primary">
-                                          $36,738
+                                        <td >
+                                          {{$customerdata->email}}
                                         </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          2
+                                        <td >
+                                          {{$customerdata->address}}
                                         </td>
-                                        <td>
-                                          Minerva Hooper
+                                        <td> 
+                                          <div  style="display: none;">
+                                          {{$a=$customerdata->behavior}}
+                                          </div>
+                                            @for ($i = 1; $i <= $a; $i++)
+                                            <span class="fa fa-star-o" data-rating="{{$i}}"></span>
+                                            @endfor
                                         </td>
-                                        <td>
-                                          Curaçao
-                                        </td>
-                                        <td>
-                                          Sinaai-Waas
-                                        </td>
-                                        <td class="text-primary">
-                                          $23,789
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          3
-                                        </td>
-                                        <td>
-                                          Sage Rodriguez
-                                        </td>
-                                        <td>
-                                          Netherlands
-                                        </td>
-                                        <td>
-                                          Baileux
-                                        </td>
-                                        <td class="text-primary">
-                                          $56,142
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          4
-                                        </td>
-                                        <td>
-                                          Philip Chaney
-                                        </td>
-                                        <td>
-                                          Korea, South
-                                        </td>
-                                        <td>
-                                          Overland Park
-                                        </td>
-                                        <td class="text-primary">
-                                          $38,735
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          5
-                                        </td>
-                                        <td>
-                                          Doris Greene
-                                        </td>
-                                        <td>
-                                          Malawi
-                                        </td>
-                                        <td>
-                                          Feldkirchen in Kärnten
-                                        </td>
-                                        <td class="text-primary">
-                                          $63,542
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          6
-                                        </td>
-                                        <td>
-                                          Mason Porter
-                                        </td>
-                                        <td>
-                                          Chile
-                                        </td>
-                                        <td>
-                                          Gloucester
-                                        </td>
-                                        <td class="text-primary">
-                                          $78,615
-                                        </td>
-                                      </tr>
+                                      </tr> 
+                                      @endforeach
                                     </tbody>
                                   </table>
                                 </div>

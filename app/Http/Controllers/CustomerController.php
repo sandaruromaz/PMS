@@ -23,6 +23,10 @@ class CustomerController extends Controller
 
          $customer->save();
 
+         $customerdata=customer::all();
+         return view('Admin.customer')
+         ->with('customerdata',$customerdata);
+
     }
 
     public function NICAutocompleate(Request $request){

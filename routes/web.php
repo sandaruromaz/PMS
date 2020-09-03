@@ -27,8 +27,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 //admin related routes
 Route::get('/Admin/customer', function () {
     $activetab="customer";
+    $customerdata=App\customer::all();
     return view('.Admin.customer')
-    ->with('activetab',$activetab);
+    ->with('activetab',$activetab)
+    ->with('customerdata',$customerdata);
 });
 Route::get('/Admin/usercontrol', function () {
     $activetab="usercontrol";
@@ -53,5 +55,7 @@ Route::get('/Admin/articles', function () {
 
 //admin related save
 Route::post('/savecustomer', 'CustomerController@store');
+Route::post('/savearticles', 'ArticlesController@store');
 //auto compleated
 Route::get('/NICAutocompleate',array('as'=>'NICAutocompleate','uses'=>'CustomerController@NICAutocompleate'));
+Route::get('/itemselect', 'JobController@selectitem');
